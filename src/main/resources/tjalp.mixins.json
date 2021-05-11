@@ -4,6 +4,7 @@
   "package": "net.tjalp.mod.tjalp.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "MinecraftServerMixin"
   ],
   "client": [
   ],

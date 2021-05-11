@@ -2,7 +2,7 @@ package net.tjalp.mod.tjalp.item.ruby;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.tjalp.mod.tjalp.Tjalp;
+import net.tjalp.mod.tjalp.item.TjalpItem;
 
 public class RubyToolMaterial implements ToolMaterial {
 
@@ -35,6 +35,6 @@ public class RubyToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Tjalp.RUBY);
+        return Ingredient.ofItems(TjalpItem.RUBY);
     }
 }
