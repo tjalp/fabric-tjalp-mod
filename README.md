@@ -1,9 +1,5 @@
-# Fabric Example Mod
+# Fabric tjalp Mod
 
-## Setup
+## About the mod
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This mod adds some utilities and is my testing ground. You shouldn't mind any bad code on here.
