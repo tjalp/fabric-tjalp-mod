@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"": {
+			"model": "tjalp:block/ruby_block"
+		}
+    }
+}
