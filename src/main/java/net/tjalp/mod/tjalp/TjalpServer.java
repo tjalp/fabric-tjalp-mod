@@ -4,8 +4,16 @@ import net.minecraft.server.MinecraftServer;
 
 public class TjalpServer {
 
-    public static TjalpServer INSTANCE;
-    private final MinecraftServer server;
+    // static
+    private static TjalpServer INSTANCE;
+
+    public static TjalpServer instance() {
+        return TjalpServer.INSTANCE;
+    }
+
+
+    // object
+    private MinecraftServer server;
 
     public TjalpServer(MinecraftServer server) {
         TjalpServer.INSTANCE = this;
@@ -22,6 +30,10 @@ public class TjalpServer {
 
     public void onServerShutdown() {
 
+    }
+
+    public void server(MinecraftServer server) {
+        this.server = server;
     }
 
     public MinecraftServer server() {

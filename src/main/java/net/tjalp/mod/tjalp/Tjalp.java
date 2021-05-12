@@ -13,6 +13,7 @@ public class Tjalp implements ModInitializer {
 
     @Override
     public void onInitialize() {
+
         TjalpBlock.registerBlocks();
         TjalpItem.registerItems();
     }

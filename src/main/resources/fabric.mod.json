@@ -4,13 +4,14 @@
   "version": "${version}",
 
   "name": "tjalp mod",
-  "description": "This is my private mod where I do all sorts of stuff. I do not recommend using this mod.",
+  "description": "This is my private mod where I do all sorts of stuff.",
   "authors": [
     "tjalp"
   ],
   "contact": {
-    "homepage": "https://tjalp.net/",
-    "sources": "https://github.com/tjalp/fabric-tjalp-mod"
+    "homepage": "https://tjalp.net",
+    "sources": "https://github.com/tjalp/fabric-tjalp-mod",
+    "issues": "https://github.com/tjalp/fabric-tjalp-mod/issues"
   },
 
   "license": "CC0-1.0",

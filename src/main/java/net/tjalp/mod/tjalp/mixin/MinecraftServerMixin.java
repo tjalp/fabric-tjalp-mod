@@ -18,11 +18,11 @@ public class MinecraftServerMixin {
 
     @Inject(method = "loadWorld", at = @At("RETURN"))
     private void loadedWorld(CallbackInfo ci) {
-        TjalpServer.INSTANCE.onServerLoadWorldComplete();
+        TjalpServer.instance().onServerLoadWorldComplete();
     }
 
     @Inject(method = "shutdown", at = @At("HEAD"))
     private void shutdown(CallbackInfo ci) {
-        TjalpServer.INSTANCE.onServerShutdown();
+        TjalpServer.instance().onServerShutdown();
     }
 }
