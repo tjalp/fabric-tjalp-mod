@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ShovelItem;
@@ -17,6 +18,7 @@ import net.tjalp.mod.tjalp.item.ruby.RubyToolMaterial;
 
 public class TjalpItem {
 
+    public static Item BAKED_EGG;
     public static Item RUBY;
     public static Item RUBY_BLOCK;
     public static Item RUBY_SWORD;
@@ -58,6 +60,7 @@ public class TjalpItem {
     }
 
     public static void registerItems() {
+        BAKED_EGG = register("baked_egg", new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.3F).build())));
         RUBY = register("ruby", new Item(new Item.Settings().group(ItemGroup.MATERIALS).fireproof()));
         RUBY_BLOCK = register("ruby_block", new BlockItem(TjalpBlock.RUBY_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS).fireproof()));
         RUBY_SWORD = register("ruby_sword", new SwordItem(RubyToolMaterial.INSTANCE, 4, -2.4F, new Item.Settings().group(ItemGroup.COMBAT).fireproof()));
