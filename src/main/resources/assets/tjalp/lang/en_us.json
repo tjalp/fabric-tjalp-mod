@@ -1,3 +1,6 @@
 {
-  "item.tjalp.baked_egg": "Baked Egg"
+  "item.tjalp.baked_egg": "Baked Egg",
+  "item.tjalp.baked_carrot": "Baked Carrot",
+  "entity.tjalp.blobfish": "Blobfish",
+  "chat.tjalp.update_available": "There is an update available for tjalp's mod!"
 }

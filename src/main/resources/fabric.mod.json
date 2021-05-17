@@ -21,6 +21,12 @@
   "entrypoints": {
     "main": [
       "net.tjalp.mod.tjalp.Tjalp"
+    ],
+    "client": [
+      "net.tjalp.mod.tjalp.TjalpClientInitializer"
+    ],
+    "server": [
+      "net.tjalp.mod.tjalp.TjalpServerInitializer"
     ]
   },
   "mixins": [

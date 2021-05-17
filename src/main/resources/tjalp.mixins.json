@@ -4,9 +4,11 @@
   "package": "net.tjalp.mod.tjalp.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "CommandManagerMixin",
     "MinecraftServerMixin"
   ],
   "client": [
+    "MinecraftClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1
