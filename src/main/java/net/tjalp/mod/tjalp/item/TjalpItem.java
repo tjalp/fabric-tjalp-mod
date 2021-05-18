@@ -47,6 +47,6 @@ public class TjalpItem {
 
     public static void registerItems() {
         BAKED_CARROT = register("baked_carrot", new Item(new Item.Settings().food(new FoodComponent.Builder().snack().hunger(2).saturationModifier(0.0F).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 900, 0), 1F).build())));
-        BAKED_EGG = register("baked_egg", new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.3F).build())));
+        BAKED_EGG = register("baked_egg", new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.3F).meat().build())));
     }
 }
