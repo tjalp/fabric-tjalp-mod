@@ -26,7 +26,7 @@ public class TjalpServer {
     }
 
     public void onServerLoadWorldComplete() {
-
+        Tjalp.instance().config().read(false);
     }
 
     public void onServerShutdown() {

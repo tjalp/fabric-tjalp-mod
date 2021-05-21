@@ -12,6 +12,6 @@ public class CommandManagerMixin {
     
     @Inject(method = "<init>", at = @At("RETURN"))
     private void commandRegistration(CommandManager.RegistrationEnvironment environment, CallbackInfo ci) {
-        Tjalp.registerCommands(((CommandManager) (Object) this).getDispatcher());
+        Tjalp.instance().registerCommands(((CommandManager) (Object) this).getDispatcher());
     }
 }

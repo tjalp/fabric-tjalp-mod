@@ -2,5 +2,12 @@
   "item.tjalp.baked_egg": "Baked Egg",
   "item.tjalp.baked_carrot": "Baked Carrot",
   "entity.tjalp.blobfish": "Blobfish",
-  "chat.tjalp.update_available": "There is an update available for tjalp's mod!"
+  "chat.tjalp.update_available": "There is an update available for tjalp's mod!",
+  "command.tjalp.wip": "Still a work in progress",
+  "commands.tjalp.tjalp.config.reload_success": "Successfully reloaded tjalp's configuration (default: %s)",
+  "commands.tjalp.tjalp.config.reload_failed": "Failed to reload tjalp's configuration, check the logs for more details",
+  "commands.tjalp.tjalp.config.remove": "Removed %s from tjalp's configuration. Remember to save if you want these settings to persist through reloads",
+  "commands.tjalp.tjalp.config.save_success": "Successfully saved tjalp's configuration (default: %s).",
+  "commands.tjalp.tjalp.config.save_failed": "Failed to save tjalp's configuration, check the logs for more details",
+  "commands.tjalp.tjalp.config.set": "Set \"%s\" to \"%s\" in tjalp's configuration. Remember to save if you want these settings to persist through reloads"
 }

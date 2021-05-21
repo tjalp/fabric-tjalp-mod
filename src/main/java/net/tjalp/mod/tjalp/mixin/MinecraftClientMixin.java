@@ -26,7 +26,7 @@ public class MinecraftClientMixin {
             ClientPlayerEntity player = client.player;
             if (UpdateChecker.newVersionAvailable()) if (player != null) player.sendMessage(new TranslatableText("chat.tjalp.update_available").formatted(Formatting.YELLOW), false);
         });
-        thread.setName("tjalp mod updater");
+        thread.setName("tjalp mod update checker");
         thread.start();
     }
 }
