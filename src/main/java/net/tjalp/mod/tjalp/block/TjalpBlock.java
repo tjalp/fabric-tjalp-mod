@@ -7,8 +7,6 @@ import net.tjalp.mod.tjalp.Tjalp;
 
 public class TjalpBlock {
 
-
-
     private static Block register(String id, Block block) {
         return register(new Identifier(Tjalp.MOD_ID, id), block);
     }
