@@ -13,19 +13,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Entity.class)
-public abstract class EntityMixin {
-
-    /*@Environment(EnvType.CLIENT)
-    @Inject(method = "shouldLeaveSwimmingPose", at = @At("HEAD"), cancellable = true)
-    private void onShouldLeaveSwimmingPose(CallbackInfoReturnable<Boolean> cir) {
-        Entity entity = (Entity) (Object) this;
-
-        if (entity.getType() != EntityType.PLAYER) return;
-
-        if (TjalpClientInitializer.keepInSwimmingPose) {
-            cir.setReturnValue(false);
-        }
-    }*/
+public class EntityMixin {
 
     @Environment(EnvType.CLIENT)
     @Inject(method = "setPose", at = @At("HEAD"), cancellable = true)
@@ -34,24 +22,11 @@ public abstract class EntityMixin {
 
         if (entity.getType() != EntityType.PLAYER) return;
 
-        if (TjalpClientInitializer.keepInSwimmingPose) {
-            if (pose != EntityPose.SWIMMING) {
+        if (TjalpClientInitializer.pose != null) {
+            if (pose != TjalpClientInitializer.pose) {
                 ci.cancel();
-                entity.setPose(EntityPose.SWIMMING);
+                entity.setPose(TjalpClientInitializer.pose);
             }
         }
     }
-
-    /*@Environment(EnvType.CLIENT)
-    @Inject(method = "updateSwimming", at = @At("HEAD"), cancellable = true)
-    private void onUpdateSwimming(CallbackInfo ci) {
-        Entity entity = (Entity) (Object) this;
-
-        if (entity.getType() != EntityType.PLAYER) return;
-
-        if (TjalpClientInitializer.keepInSwimmingPose) {
-            Tjalp.logger().warn("Setting swimming to true");
-            entity.setSwimming(true);
-        }
-    }*/
 }

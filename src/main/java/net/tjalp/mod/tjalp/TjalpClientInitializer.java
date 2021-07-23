@@ -10,7 +10,7 @@ import org.lwjgl.glfw.GLFW;
 
 public class TjalpClientInitializer implements ClientModInitializer {
 
-    public static boolean keepInSwimmingPose = false;
+    public static EntityPose pose = EntityPose.STANDING;
 
     @Override
     public void onInitializeClient() {
@@ -21,6 +21,20 @@ public class TjalpClientInitializer implements ClientModInitializer {
 
     private void registerKeyBindings() {
 
+        KeyBinding sleepKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key." + Tjalp.MOD_ID + ".sleep",
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_H,
+                "category." + Tjalp.MOD_ID + ".tjalp"
+        ));
+
+        KeyBinding spinKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key." + Tjalp.MOD_ID + ".spin",
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_J,
+                "category." + Tjalp.MOD_ID + ".tjalp"
+        ));
+
         KeyBinding swimKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key." + Tjalp.MOD_ID + ".swim",
                 InputUtil.Type.KEYSYM,
@@ -29,14 +43,9 @@ public class TjalpClientInitializer implements ClientModInitializer {
         ));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            if (swimKeyBinding.wasPressed()) {
-                keepInSwimmingPose = !keepInSwimmingPose;
-                Tjalp.logger().warn("Pressed keybind: " + keepInSwimmingPose);
-            }
-
-            if (keepInSwimmingPose) {
-                client.player.setPose(EntityPose.SWIMMING);
-            }
+            if (sleepKeyBinding.wasPressed()) if (pose == EntityPose.SLEEPING) pose = null; else pose = EntityPose.SLEEPING;
+            if (spinKeyBinding.wasPressed()) if (pose == EntityPose.SPIN_ATTACK) pose = null; else pose = EntityPose.SPIN_ATTACK;
+            if (swimKeyBinding.wasPressed()) if (pose == EntityPose.SWIMMING) pose = null; else pose = EntityPose.SWIMMING;
         });
     }
 }
