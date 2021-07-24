@@ -4,14 +4,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mojang.brigadier.CommandDispatcher;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.command.ServerCommandSource;
 import net.tjalp.mod.tjalp.block.TjalpBlock;
 import net.tjalp.mod.tjalp.command.StructureCommand;
 import net.tjalp.mod.tjalp.command.TjalpCommand;
 import net.tjalp.mod.tjalp.config.TjalpConfig;
-import net.tjalp.mod.tjalp.entity.BlobfishEntity;
 import net.tjalp.mod.tjalp.entity.TjalpEntityType;
 import net.tjalp.mod.tjalp.item.TjalpItem;
 import org.apache.logging.log4j.LogManager;
@@ -67,7 +65,6 @@ public class Tjalp implements ModInitializer {
         TjalpBlock.registerBlocks();
         TjalpItem.registerItems();
         TjalpEntityType.registerEntityTypes();
-        FabricDefaultAttributeRegistry.register(TjalpEntityType.BLOBFISH, BlobfishEntity.createMobAttributes());
     }
 
     public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher) {

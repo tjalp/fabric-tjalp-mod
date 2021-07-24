@@ -4,9 +4,12 @@
   "package": "net.tjalp.mod.tjalp.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "EntityMixin",
     "CommandManagerMixin",
-    "MinecraftServerMixin"
+    "EntityInvoker",
+    "EntityMixin",
+    "LivingEntityMixin",
+    "MinecraftServerMixin",
+    "PlayerEntityMixin"
   ],
   "client": [
     "MinecraftClientMixin"
