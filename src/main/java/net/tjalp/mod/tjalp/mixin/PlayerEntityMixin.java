@@ -16,6 +16,6 @@ public class PlayerEntityMixin {
     @Environment(EnvType.CLIENT)
     @Inject(method = "isSwimming", at = @At("HEAD"), cancellable = true)
     private void onIsSwimming(CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(TjalpClientInitializer.pose == EntityPose.SWIMMING);
+        if (TjalpClientInitializer.pose == EntityPose.SWIMMING) cir.setReturnValue(true);
     }
 }

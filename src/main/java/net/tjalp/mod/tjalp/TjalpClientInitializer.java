@@ -3,17 +3,14 @@ package net.tjalp.mod.tjalp;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.EntityPose;
-import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket;
-import net.minecraft.network.packet.s2c.play.PlayerActionResponseS2CPacket;
 import org.lwjgl.glfw.GLFW;
 
 public class TjalpClientInitializer implements ClientModInitializer {
 
-    public static EntityPose pose = EntityPose.STANDING;
+    public static EntityPose pose = null;
 
     @Override
     public void onInitializeClient() {
