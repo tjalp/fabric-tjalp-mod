@@ -4,6 +4,14 @@
 
 This mod adds some utilities and is my testing ground. You shouldn't mind any bad code on here.
 
+## Usage
+
+Please note that this mod requires [fabric](https://fabricmc.net/) to function, for an installation guide please check out their [wiki](https://fabricmc.net/wiki/install)
+1. Download the latest version from the [releases](https://github.com/tjalp/fabric-tjalp-mod/releases/latest) page.
+2. Download [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api) from Curseforge
+3. Put the downloaded files in your mods folder, which can be found in `.minecraft/mods`.
+4. Start your game
+
 ## Compiling
 
 This mod requires JDK 16.
