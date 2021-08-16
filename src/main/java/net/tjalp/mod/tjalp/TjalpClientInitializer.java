@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.EntityPose;
-import org.lwjgl.glfw.GLFW;
 
 public class TjalpClientInitializer implements ClientModInitializer {
 
@@ -23,43 +22,37 @@ public class TjalpClientInitializer implements ClientModInitializer {
 
         KeyBinding dieKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key." + Tjalp.MOD_ID + ".die",
-                InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_U,
+                InputUtil.UNKNOWN_KEY.getCode(),
                 "category." + Tjalp.MOD_ID + ".tjalp"
         ));
 
         KeyBinding flyKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key." + Tjalp.MOD_ID + ".fly",
-                InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_O,
+                InputUtil.UNKNOWN_KEY.getCode(),
                 "category." + Tjalp.MOD_ID + ".tjalp"
         ));
 
         KeyBinding jumpKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key." + Tjalp.MOD_ID + ".jump",
-                InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_Y,
+                InputUtil.UNKNOWN_KEY.getCode(),
                 "category." + Tjalp.MOD_ID + ".tjalp"
         ));
 
         KeyBinding sleepKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key." + Tjalp.MOD_ID + ".sleep",
-                InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_H,
+                InputUtil.UNKNOWN_KEY.getCode(),
                 "category." + Tjalp.MOD_ID + ".tjalp"
         ));
 
         KeyBinding spinKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key." + Tjalp.MOD_ID + ".spin",
-                InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_J,
+                InputUtil.UNKNOWN_KEY.getCode(),
                 "category." + Tjalp.MOD_ID + ".tjalp"
         ));
 
         KeyBinding swimKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key." + Tjalp.MOD_ID + ".swim",
-                InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_K,
+                InputUtil.UNKNOWN_KEY.getCode(),
                 "category." + Tjalp.MOD_ID + ".tjalp"
         ));
 
